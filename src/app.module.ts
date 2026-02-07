@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -25,6 +27,8 @@ import { MenuModule } from './referenciales/parametros/menu/menu.module';
 import { GrupoMenuModule } from './referenciales/parametros/grupo-menu/grupo-menu.module';
 import { MenuRolModule } from './referenciales/parametros/menu-rol/menu-rol.module';
 import { TiposDocumentoModule } from './referenciales/parametros/tipos-documento/tipos-documento.module';
+import { JornadasModule } from './operaciones/jornadas/jornadas.module';
+import { MarcacionesModule } from './operaciones/marcaciones/marcaciones.module';
 
 @Module({
   imports: [
@@ -66,6 +70,8 @@ import { TiposDocumentoModule } from './referenciales/parametros/tipos-documento
     GrupoMenuModule,
     MenuRolModule,
     TiposDocumentoModule,
+    JornadasModule,
+    MarcacionesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
